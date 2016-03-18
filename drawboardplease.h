@@ -1,0 +1,6 @@
+#ifndef DRAWBOARDPLEASE_H_INCLUDED
+#define DRAWBOARDPLEASE_H_INCLUDED
+
+void drawboard(char board[3][3]);
+
+#endif // DRAWBOARDPLEASE_H_INCLUDED
