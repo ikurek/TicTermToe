@@ -4,11 +4,40 @@
 	<cstdlib>
 	<cstdio>
 
+1458343859 
+
 1458343126 source:d:\github\tictermtoe\main.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
 	"drawboardplease.h"
 
+1458343126 please.h"
+
 1458343072 d:\github\tictermtoe\drawboardplease.h
+
+1458410159 source:/mnt/HDD/GitHub/TicTermToe/drawboardplease.cpp
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	"drawboardplease.h"
+	"checkforwinplease.h"
+
+1458410616 source:/mnt/HDD/GitHub/TicTermToe/checkforwinplease.cpp
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	"drawboardplease.h"
+	"checkforwinplease.h"
+
+1458409934 source:/mnt/HDD/GitHub/TicTermToe/main.cpp
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	"drawboardplease.h"
+	"checkforwinplease.h"
+
+1458343072 /mnt/HDD/GitHub/TicTermToe/drawboardplease.h
+
+1458409602 /mnt/HDD/GitHub/TicTermToe/checkforwinplease.h
 

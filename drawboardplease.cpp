@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <cstdio>
+#include "drawboardplease.h"
+#include "checkforwinplease.h"
 
 using namespace std;
 

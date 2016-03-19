@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <cstdio>
 #include "drawboardplease.h"
+#include "checkforwinplease.h"
 
 using namespace std;
 
@@ -14,7 +15,7 @@ int main()
     int wiersz, kolumna;
     int tura = 1;
 
-    //Wype³nia tablice dwuwymiarowa spacjami
+    //Wypelnia tablice dwuwymiarowa spacjami
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
@@ -33,7 +34,8 @@ int main()
 
     while(badchoice)
     {
-        //Z niewiadomego powodu scanf robi³o tu force close...
+        //Z niewiadomego powodu scanf robilo tu force close...
+        //Powinienem przezucic sie w calosci na cstdio, na razie iostream
         cin >> choice;
 
         if(choice != 1 && choice != 2)
@@ -49,10 +51,9 @@ int main()
         {
         case 1:
             {
-                bool win = false;
                 printf("Zaczynamy! \n \n");
                 printf("Tura %d \n", tura);
-                while (win == false)
+                while (checkwinx(board) == false && checkwino(board) == false)
                 {
                     //Rysuje aktualny stan planszy
                     drawboard(board);
@@ -73,6 +74,15 @@ int main()
                         printf("Tura %d \n", tura);
                     }
 
+                }
+
+                if(checkwinx == true)
+                {
+                    printf("Wygrywa gracz pierwszy w turze %d", tura);
+                }
+
+                if(checkwino == true)
+                {
                 }
             }
             break;
