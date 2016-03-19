@@ -53,7 +53,8 @@ int main()
             {
                 printf("Zaczynamy! \n \n");
                 printf("Tura %d \n", tura);
-                while (checkwinx(board) == false && checkwino(board) == false)
+                while (checkwinx(board) == false && checkwino(board) == false 
+                && checkdraw(board, tura) == false)
                 {
                     //Rysuje aktualny stan planszy
                     drawboard(board);
@@ -63,6 +64,7 @@ int main()
                     printf("Podaj kolumne(1, 2, lub 3): ");
                     cin >> kolumna;
 
+                    //Sprawdzenie czy podane pole jest wlasciwe i puste
                     if (board[wiersz - 1][kolumna - 1] != ' ')
                     {
                         printf("To pole jest bledne, wybierz inne! \n");
@@ -73,17 +75,12 @@ int main()
                         tura++;
                         printf("Tura %d \n", tura);
                     }
-
                 }
 
-                if(checkwinx == true)
-                {
-                    printf("Wygrywa gracz pierwszy w turze %d", tura);
-                }
+                drawboard(board);
 
-                if(checkwino == true)
-                {
-                }
+                tellmewhowon(board, tura);
+
             }
             break;
 

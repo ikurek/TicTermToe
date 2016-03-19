@@ -33,7 +33,17 @@ bool checkwino(char board[3][3])
     return false;
 }
 
-bool checkdraw(char board[3][3])
+bool checkdraw(char board[3][3], int tura)
 {
-    return true;
+    if(checkwinx(board) == false && checkwino(board) == false && tura == 10)
+    {
+        return true;
+    }
+}
+
+void tellmewhowon(char board[3][3], int tura)
+{
+    if(checkwinx(board) == true) printf("Wygrywa gracz pierwszy w turze %d \n", tura);
+    if(checkwino(board) == true) printf("Wygrywa gracz drugi w turze %d \n", tura);
+    if(checkdraw(board, tura) == true) printf("Gra zakonczona remisem w turze %d \n", tura);
 }
